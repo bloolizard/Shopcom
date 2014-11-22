@@ -7,16 +7,23 @@ var T = new Twit(config00);
 console.log('Starting Twitter Bot...');
 
 var phrases = ['Shop at Nutritonik.com!',
-    'Health for a Future. Save @ Nutritonik.com '];
+    'Health for a Future. Save @ Nutritonik.com',
+    'Check out our partner site at http://bit.ly/YjuUY6',
+    'Live Healthy- Nutritonik.com'];
 
-T.post('statuses/update', { status: phrases[1] }, function(err, data, response) {
-    console.log(data);
-    console.log(err);
-});
+function getRandom(max_num){
+    return Math.floor(Math.random()*max_num);
+}
+
+//Test Case
+//T.post('statuses/update', { status: phrases[getRandom(phrases.length)] }, function(err, data, response) {
+//    console.log(data);
+//    console.log(err);
+//});
 
 
 setTimeout(function(){
-    T.post('statuses/update', { status: 'Shop at Nutritonik.com!' }, function(err, data, response) {
+    T.post('statuses/update', { status: phrases[getRandom(phrases.length)] }, function(err, data, response) {
         console.log(data);
         console.log(err);
 //    console.log(response);
