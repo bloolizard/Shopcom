@@ -6,10 +6,12 @@ var T = new Twit(config00);
 
 console.log('Starting Twitter Bot...');
 
-var phrases = ['Shop at Nutritonik.com!',
-    'Health for a Future. Save @ Nutritonik.com',
+var phrases = ['Shop at Nutritonik.com! #Health http://bit.ly/YjuUY6',
+    'Health for a Future. http://bit.ly/YjuUY6',
     'Check out our partner site at http://bit.ly/YjuUY6',
-    'Live Healthy- Nutritonik.com'];
+    'Live Healthy http://bit.ly/YjuUY6',
+    'Save and Be Awesome #Fitness http://bit.ly/YjuUY6',
+    'Tablet v Pill, you decide! #Health https://instagram.com/p/0F53EAghF5/ '];
 
 // Returns a Random Time
 function getRandomTime() {
